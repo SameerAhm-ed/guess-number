@@ -2,10 +2,13 @@
   "name": "guess-number",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,9 @@
   "devDependencies": {
     "@types/chalk-animation": "^1.6.1",
     "@types/node": "^18.11.17"
+  },
+  "bin": {
+    "number-guess": "lib/index.js"
   },
   "dependencies": {
     "@types/inquirer": "^9.0.3",
